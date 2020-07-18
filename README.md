@@ -1,0 +1,2 @@
+# ummahacks-spans
+MuslimFriendly
