@@ -4,75 +4,108 @@ const express = require('express');
 
 const app = express();
 const cors = require('cors');
-app.use(cors({origin:true}));
+app.use(cors({ origin: true }));
 
 //initialize firestore
-var serviceAccount = require("./ummahacksKey.json");
+var serviceAccount = require('./ummahacksKey.json');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://ummahacks-spans.firebaseio.com"
+  databaseURL: 'https://ummahacks-spans.firebaseio.com',
 });
 const db = admin.firestore();
- 
+
 //routes
-app.get("/hello-world", (req, res)=>{
-    return res.status(200).send("Hello World!!");
+app.get('/hello-world', (req, res) => {
+  return res.status(200).send('Hello World!!');
 });
 
 //post method to add a school
-app.post("/api/addschool", (req, res)=>{
-    (async ()=>{
-        try {        
-               await db.collection("Schools").doc(req.body.id).set({
-                    schoolName: req.body.schoolName,
-                    schoolLocation: req.body.schoolLocationObj ? req.body.schoolLocationObj : "",
-                    schoolDocumentID: req.body.id,
-                });
-                return res.status(200).send("School added successfully!");
-        } catch(error){
-            console.log(error);
-            return res.status(500).send(error);
-        }
-    })();
+app.post('/api/addschool', (req, res) => {
+  (async () => {
+    try {
+      await db
+        .collection('Schools')
+        .doc(req.body.id)
+        .set({
+          schoolName: req.body.schoolName,
+          schoolLocation: req.body.schoolLocation
+            ? req.body.schoolLocation
+            : '',
+          schoolDocumentID: req.body.id,
+        });
+      return res.status(200).send('School added successfully!');
+    } catch (error) {
+      console.log(error);
+      return res.status(500).send(error);
+    }
+  })();
 });
+
 //post method to add a review for a school
-app.post("/api/review", (req, res)=>{
-    (   
-        async ()=>{
-            try {
-                await db.collection("SchoolReviews").doc(req.body.id).set({
-                    schoolName: req.body.schoolName,
-                    hasPrayerSpace: req.body.hasPrayerSpace ? req.body.hasPrayerSpace : "",
-                    prayerSpaceRating: req.body.prayerSpaceRating ? req.body.prayerSpaceRating : "",
-                });
-                return res.status(200).send("Review sent successfully!");
-            } catch(error){
-                console.log(error);
-                return res.status(500).send("There was an error sending review. Try again later!");
-            }
-        }
-    )();
+app.post('/api/review', (req, res) => {
+  (async () => {
+    try {
+      await db
+        .collection('SchoolReviews')
+        .doc(req.body.id)
+        .set({
+          schoolName: req.body.schoolName,
+          hasPrayerSpace: req.body.hasPrayerSpace
+            ? req.body.hasPrayerSpace
+            : '',
+          prayerSpaceRating: req.body.prayerSpaceRating
+            ? req.body.prayerSpaceRating
+            : '',
+        });
+      return res.status(200).send('Review sent successfully!');
+    } catch (error) {
+      console.log(error);
+      return res
+        .status(500)
+        .send('There was an error sending review. Try again later!');
+    }
+  })();
 });
 
+// Read a specific school based on ID
+app.get('/api/schools/:id', (req, res) => {
+  (async () => {
+    try {
+      const document = db.collection('Schools').doc(req.params.id);
+      let school = await document.get();
+      let response = school.data();
+      return res.status(200).send(response);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).send(error);
+    }
+  })();
+});
+
+// Get all schools
+app.get('/api/schools/', (req, res) => {
+  async () => {
+    try {
+      let query = db.collection('schools');
+      let response = [];
+      await query.get().then((querySnapshot) => {
+        let docs = querySnapshot.docs;
+        for (let doc of docs) {
+          const selectedItem = {
+            id: doc.id,
+            schoolName: doc.data().schoolName,
+          };
+          response.push(selectedItem);
+        }
+        return response;
+      });
+      return response;
+    } catch (error) {
+      console.log(error);
+      return res.status(500).send(error);
+    }
+  };
+});
+
+// Export the api to Firebase cloud functions
 exports.app = functions.https.onRequest(app);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
