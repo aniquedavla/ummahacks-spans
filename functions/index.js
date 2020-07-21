@@ -15,7 +15,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 //routes
-app.get('/hello-world', (req, res) => {
+app.get('/', (req, res) => {
   return res.status(200).send('Hello World!!');
 });
 
@@ -24,14 +24,15 @@ app.post('/api/addschool', (req, res) => {
   (async () => {
     try {
       await db
-        .collection('Schools')
+        .collection('SchoolsMetadata')
         .doc(req.body.id)
         .set({
           schoolName: req.body.schoolName,
-          schoolLocation: req.body.schoolLocation
-            ? req.body.schoolLocation
+          city: req.body.city
+            ? req.body.city
             : '',
-          schoolDocumentID: req.body.id,
+          schoolID: req.body.id,
+          state: req.body.state
         });
       return res.status(200).send('School added successfully!');
     } catch (error) {
@@ -42,12 +43,12 @@ app.post('/api/addschool', (req, res) => {
 });
 
 //post method to add a review for a school
-app.post('/api/review', (req, res) => {
+app.post('/api/school/:id/review', (req, res) => {
   (async () => {
     try {
       await db
         .collection('SchoolReviews')
-        .doc(req.body.id)
+        .doc(req.params.id)
         .set({
           schoolName: req.body.schoolName,
           hasPrayerSpace: req.body.hasPrayerSpace
@@ -71,7 +72,7 @@ app.post('/api/review', (req, res) => {
 app.get('/api/schools/:id', (req, res) => {
   (async () => {
     try {
-      const document = db.collection('Schools').doc(req.params.id);
+      const document = db.collection('SchoolReviewSummary').doc(req.params.id);
       let school = await document.get();
       let response = school.data();
       return res.status(200).send(response);
@@ -86,7 +87,7 @@ app.get('/api/schools/:id', (req, res) => {
 app.get('/api/schools/', (req, res) => {
   async () => {
     try {
-      let query = db.collection('schools');
+      let query = db.collection('SchoolsMetadata');
       let response = [];
       await query.get().then((querySnapshot) => {
         let docs = querySnapshot.docs;
