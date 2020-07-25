@@ -54,8 +54,38 @@ app.post('/api/school/:id/review', (req, res) => {
           hasPrayerSpace: req.body.hasPrayerSpace
             ? req.body.hasPrayerSpace
             : '',
+          hasWuduArea: req.body.hasWuduArea
+            ? req.body.hasWuduArea
+            : '',
+          hasHalalOptions: req.body.hasHalalOptions
+            ? req.body.hasHalalOptions
+            : '',
+          isHijabFriendly: req.body.isHijabFriendly
+            ? req.body.isHijabFriendly
+            : '',
+          isBeardFriendly: req.body.isBeardFriendly
+            ? req.body.isBeardFriendly
+            : '',  
+          acknowledgesMuslimCelebrations: req.body.acknowledgesMuslimCelebrations
+            ? req.body.acknowledgesMuslimCelebrations
+            : '',
+          hasMuslimLeadership: req.body.hasMuslimLeadership
+            ? req.body.hasMuslimLeadership
+            : '', 
+          hasMuslimWomanLeadership: req.body.hasMuslimWomanLeadership
+            ? req.body.hasMuslimWomanLeadership
+            : '',
           prayerSpaceRating: req.body.prayerSpaceRating
             ? req.body.prayerSpaceRating
+            : '',
+          wuduAreaRating: req.body.wuduAreaRating
+            ? req.body.wuduAreaRating
+            : '',
+          clothingFlexibilityRating: req.body.clothingFlexibilityRating
+            ? req.body.clothingFlexibilityRating
+            : '',
+          muslimLeadershipRating: req.body.muslimLeadershipRating
+            ? req.body.muslimLeadershipRating
             : '',
         });
       return res.status(200).send('Review sent successfully!');
