@@ -11,6 +11,11 @@ MuslimFriendly is dedicated to bringing transparency in Muslim inclusivity at co
 
 ## Overview
 ### Description
+We at MuslimFriendly are dedicated to bringing transparency in Muslim inclusivity at colleges, universities, and workplaces worldwide.
+
 
 ## Wireframes
 <img src="https://i.ibb.co/B39TYbg/Land.png" >
+
+## Schema
+<img src="https://i.ibb.co/QbPTs6y/Screen-Shot-2020-07-27-at-12-02-33-AM.png" alt="Screen-Shot-2020-07-27-at-12-02-33-AM" border="0">
