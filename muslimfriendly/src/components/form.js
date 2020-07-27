@@ -38,12 +38,12 @@ class Rate extends Component {
           </h3>
           <Slider
             style={{ width: "600px", textAlign: "left", paddingLeft: "20px" }}
-            defaultValue={5}
+            defaultValue={3}
             aria-labelledby="discrete-slider-small-steps"
             step={1}
             marks
             min={0}
-            max={10}
+            max={5}
             valueLabelDisplay="auto"
           />
         </div>
@@ -64,12 +64,12 @@ class Rate extends Component {
           </h3>
           <Slider
             style={{ width: "600px", textAlign: "left", paddingLeft: "20px" }}
-            defaultValue={5}
+            defaultValue={3}
             aria-labelledby="discrete-slider-small-steps"
             step={1}
             marks
             min={0}
-            max={10}
+            max={5}
             valueLabelDisplay="auto"
           />
         </div>
@@ -91,12 +91,12 @@ class Rate extends Component {
           </h3>
           <Slider
             style={{ width: "600px", textAlign: "left", paddingLeft: "20px" }}
-            defaultValue={5}
+            defaultValue={3}
             aria-labelledby="discrete-slider-small-steps"
             step={1}
             marks
             min={0}
-            max={10}
+            max={5}
             valueLabelDisplay="auto"
           />
         </div>
@@ -118,12 +118,12 @@ class Rate extends Component {
           </h3>
           <Slider
             style={{ width: "600px", textAlign: "left", paddingLeft: "20px" }}
-            defaultValue={5}
+            defaultValue={3}
             aria-labelledby="discrete-slider-small-steps"
             step={1}
             marks
             min={0}
-            max={10}
+            max={5}
             valueLabelDisplay="auto"
           />
         </div>
