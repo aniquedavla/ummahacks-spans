@@ -26,13 +26,13 @@ User selects a school from the autocomplete drop-down and is directed to a page 
 <add screenshot>
 
 User views the ratings for a school
-<add screenshot>
+<img src="./search.png" width=400>
 
 
 ### User submits a rating for a school
 
 User searches for a specific school through the search bar
-<add screenshot>
+<img src="./review.png" width=400>
 
 User selects a school from the autocomplete drop-down and is directed to a page containing information about that school
 <add screenshot>
