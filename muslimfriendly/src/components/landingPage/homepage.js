@@ -7,12 +7,12 @@ import { Row, Col } from "react-bootstrap";
 class HomePage extends Component {
   data = [
     {
-      key: "john",
-      value: "John Doe",
+      key: "San",
+      value: "San Jose State University",
     },
     {
-      key: "jane",
-      value: "Jane Doe",
+      key: "San",
+      value: "San Francisco University",
     },
     {
       key: "mary",
