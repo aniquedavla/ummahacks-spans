@@ -1,0 +1,19 @@
+.Banner {
+  background-position: center;
+  height: 100%;
+}
+
+.SearchBar {
+  padding-top: 100px;
+  width: 1000px;
+  padding-left: 300px;
+}
+.headingT {
+  text-align: center;
+  font: Light 99px/149px Kohinoor Telugu;
+  font-size: 90px;
+  font-weight: 100;
+  letter-spacing: 3.46px;
+  color: #ffffff;
+  opacity: 1;
+}
