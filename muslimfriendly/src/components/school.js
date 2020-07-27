@@ -138,9 +138,29 @@ class School extends Component {
               <ProgressBar now={30} label={`30%`} style={{ width: "300px" }} />
             </Row>
           </Col>
+          <br />
+          <br />
         </Row>
+        <br />
+        <br />
 
-        <div className="comment"></div>
+        <Row style={{ paddingLeft: "150px" }}>
+          {" "}
+          <div className="comment">
+            <h3 style={{ textAlign: "left" }}>Anonymous</h3>
+            <Row>
+              <img src={star} style={{ height: "30px", paddingLeft: "10px" }} />
+              <h3 style={{ textAlign: "left" }}>4/5 Stars</h3>
+            </Row>
+            <br />
+            <h3 style={{ textAlign: "left", fontSize: "20px" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </h3>
+          </div>
+        </Row>
       </div>
     );
   }

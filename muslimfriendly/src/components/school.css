@@ -25,3 +25,16 @@ h3 {
   color: #000000;
   opacity: 1;
 }
+
+.comment {
+  border: #000000;
+  border-style: solid;
+  width: 900px;
+  height: 250px;
+  text-align: left;
+  padding: 10px;
+}
+
+h3.comment {
+  padding-left: 0px;
+}
