@@ -17,5 +17,4 @@ Muslim-friendly is a platform that allows Muslims to voice opinions about the "m
 ## Wireframes
 <img src="https://i.ibb.co/9qHyM2b/Screen-Shot-2020-07-27-at-12-07-33-AM.png" alt="Screen-Shot-2020-07-27-at-12-07-33-AM" border="0">
 ## Schema
-<img src="https://i.ibb.co/QbPTs6y/Screen-Shot-2020-07-27-at-12-02-33-AM.png" alt="Screen-Shot-2020-07-27-at-12-02-33-AM" border="0">
-<img src="https://i.ibb.co/dJHbNdV/Screen-Shot-2020-07-27-at-12-05-40-AM.png" alt="Screen-Shot-2020-07-27-at-12-05-40-AM" border="0">
+<img src="https://i.ibb.co/nf0pHbD/116342158-611426519778322-5777042060872974202-n.png" alt="116342158-611426519778322-5777042060872974202-n" border="0">
