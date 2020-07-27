@@ -11,12 +11,17 @@ import beard from "../images/beard.png";
 import cel from "../images/muslimcel.png";
 import lead from "../images/leadership.png";
 import mlead from "../images/woma.png";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import Button from "react-bootstrap/Button";
 
 class School extends Component {
   render() {
     return (
       <div>
         <img src={SchoolImage} style={{ height: "400px" }} />
+        <br />
+        <br />
+
         <Row>
           <Col>
             <h1>San Jose State University</h1>
@@ -25,30 +30,38 @@ class School extends Component {
               <h3> 4.7 out of 5 (35 Reviews)</h3>
             </Row>
           </Col>
-          <Col></Col>
+          <Col>
+            <Button>Rate this School</Button>
+          </Col>
         </Row>
         <br />
         <br />
 
         <Row>
           <h3 style={{ paddingLeft: "30px" }}>Amenities</h3>
+          <br />
+          <br />
           <Col>
             <br />
             <br />
             <Row>
               <img src={sajadah} style={{ height: "30px" }} />{" "}
               <h3> Prayer Space</h3>
+              <br />
             </Row>
             <Row>
               <img src={wudu} style={{ height: "30px" }} /> <h3> Wudu Area</h3>
+              <br />
             </Row>
             <Row>
               <img src={halal} style={{ height: "30px" }} />{" "}
               <h3>Halal Options</h3>
+              <br />
             </Row>
             <Row>
               <img src={hijab} style={{ height: "30px" }} />{" "}
               <h3>Hijab Friendly</h3>
+              <br />
             </Row>
           </Col>
           <Col>
@@ -61,21 +74,73 @@ class School extends Component {
                 {" "}
                 <span></span>Beard Friendly
               </h3>
+              <br />
             </Row>
             <Row>
               <img src={cel} style={{ height: "30px" }} />{" "}
               <h3>Muslim Celebrations</h3>
+              <br />
             </Row>
             <Row>
               <img src={lead} style={{ height: "30px" }} />{" "}
               <h3>Muslim Leadership</h3>
+              <br />
             </Row>
             <Row>
               <img src={mlead} style={{ height: "30px" }} />{" "}
               <h3>Muslim Woman Leadership</h3>
+              <br />
             </Row>
           </Col>
         </Row>
+
+        <Row>
+          <br />
+          <br />
+
+          <h3 style={{ paddingLeft: "30px" }}>Reviews</h3>
+          <br />
+          <br />
+
+          <Col>
+            <br />
+            <br />
+            <Row>
+              <h3>Prayer Space</h3>
+            </Row>
+            <Row>
+              <ProgressBar now={88} label={`88%`} style={{ width: "300px" }} />
+            </Row>
+            <br />
+            <br />
+            <Row>
+              <h3>Wudu Area</h3>
+            </Row>
+            <Row>
+              <ProgressBar now={74} label={`74%`} style={{ width: "300px" }} />
+            </Row>
+          </Col>
+          <Col>
+            <br />
+            <br />
+            <Row>
+              <h3>Clothing Flexibility</h3>
+            </Row>
+            <Row>
+              <ProgressBar now={60} label={`60%`} style={{ width: "300px" }} />
+            </Row>
+            <br />
+            <br />
+            <Row>
+              <h3>Muslim Leadership</h3>
+            </Row>
+            <Row>
+              <ProgressBar now={30} label={`30%`} style={{ width: "300px" }} />
+            </Row>
+          </Col>
+        </Row>
+
+        <div className="comment"></div>
       </div>
     );
   }
