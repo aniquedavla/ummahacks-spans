@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import backgroundImage from "../../images/background.png";
 import "./homepage.css";
 import ReactSearchBox from "react-search-box";
-import unity from "../../image/unit.png";
+import unity from "../../images/unit.png";
 
 class HomePage extends Component {
   data = [
