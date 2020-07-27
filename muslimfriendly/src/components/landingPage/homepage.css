@@ -17,3 +17,18 @@
   color: #ffffff;
   opacity: 1;
 }
+
+.MissionState {
+  top: 1923px;
+  left: 66px;
+  width: 932px;
+  height: 232px;
+  text-align: left;
+  font: Light 99px/149px Kohinoor Telugu;
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: 3.46px;
+  padding-left: 20px;
+  color: #000000;
+  opacity: 1;
+}

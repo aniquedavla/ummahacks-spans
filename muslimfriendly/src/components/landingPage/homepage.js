@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import backgroundImage from "../../images/background.png";
 import "./homepage.css";
 import ReactSearchBox from "react-search-box";
+import unity from "../../image/unit.png";
 
 class HomePage extends Component {
   data = [
@@ -47,6 +48,13 @@ class HomePage extends Component {
               data={this.data}
               callback={(record) => console.log(record)}
             />
+          </div>
+        </div>
+        <div>
+          <div className="MissionState">
+            Muslim Friendly Mission <br />
+            Statement
+            <img src={unity} />
           </div>
         </div>
       </div>
