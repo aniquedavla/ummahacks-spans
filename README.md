@@ -11,7 +11,7 @@ MuslimFriendly is dedicated to bringing transparency in Muslim inclusivity at co
 
 ## Overview
 ### Description
-We at MuslimFriendly are dedicated to bringing transparency in Muslim inclusivity at colleges, universities, and workplaces worldwide.
+Muslim-friendly is a platform that allows Muslims to voice opinions about the "muslim-friendliness" of their colleges. The college reviews are intentioned to help incoming freshmen make informed decisions about their choice of college by providing them insight into the place's culture. Ratings for each college are calculated holistically; the presence--as well as the quality--of facilities such as prayer rooms and wudu areas, in addition to accommodations such as halal food options, are considered.
 
 
 ## Wireframes
