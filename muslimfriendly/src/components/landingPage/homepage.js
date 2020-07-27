@@ -65,10 +65,15 @@ class HomePage extends Component {
                 Statement
               </div>
               <div className="mission">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Muslim-friendly is a platform that allows Muslims to voice
+                opinions about the "muslim-friendliness" of their colleges. The
+                college reviews are intentioned to help incoming freshmen make
+                informed decisions about their choice of college by providing
+                them insight into the place's culture. Ratings for each college
+                are calculated holistically; the presence--as well as the
+                quality--of facilities such as prayer rooms and wudu areas, in
+                addition to accommodations such as halal food options, are
+                considered.
               </div>
             </Col>
             <Col className="unit">
