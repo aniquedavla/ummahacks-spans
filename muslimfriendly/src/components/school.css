@@ -1,0 +1,24 @@
+.Banner {
+  background-position: center;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+  font: Light 109px/163px Kohinoor Telugu;
+  font-size: 50px;
+  font-weight: 100;
+
+  letter-spacing: 3.81px;
+  color: #000000;
+  opacity: 1;
+}
+
+h3 {
+  text-align: center;
+  font: Light 109px/163px Kohinoor Telugu;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 3.81px;
+  color: #000000;
+  opacity: 1;
+}
