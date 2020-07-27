@@ -1,6 +1,8 @@
 # ummahacks-spans
 # Muslim Friendly
 
+We at MuslimFriendly are dedicated to bringing transperancy in Muslim inclusivity at colleges, univeristy and collages worldwide. 
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
