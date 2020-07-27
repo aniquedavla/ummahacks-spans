@@ -13,6 +13,7 @@ import lead from "../images/leadership.png";
 import mlead from "../images/woma.png";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 class School extends Component {
   render() {
@@ -31,7 +32,9 @@ class School extends Component {
             </Row>
           </Col>
           <Col>
-            <Button>Rate this School</Button>
+            <Link to="/Rate">
+              <Button>Rate this School</Button>
+            </Link>
           </Col>
         </Row>
         <br />
