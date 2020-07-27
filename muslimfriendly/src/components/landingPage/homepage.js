@@ -4,6 +4,9 @@ import "./homepage.css";
 import ReactSearchBox from "react-search-box";
 import unity from "../../images/unit.png";
 import { Row, Col } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
 class HomePage extends Component {
   data = [
     {
@@ -48,6 +51,10 @@ class HomePage extends Component {
               data={this.data}
               callback={(record) => console.log(record)}
             />
+            <br />
+            <Link to="/school">
+              <Button>Search</Button>{" "}
+            </Link>
           </div>
         </div>
         <div>

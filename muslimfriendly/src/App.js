@@ -3,11 +3,12 @@ import logo from "./images/moon.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 /* ----- Components ----- */
 import NavBar from "./components/navbar.js";
 import HomePage from "./components/landingPage/homepage.js";
 import School from "./components/school.js";
+import Rate from "./components/form.js";
+import Thank from "./components/thankyou.js";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/School" component={School} />
+          <Route exact path="/Rate" component={Rate} />
+          <Route exact path="/thanks" component={Thank} />
         </Switch>
       </Router>
     </div>
