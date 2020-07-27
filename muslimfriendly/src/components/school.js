@@ -55,7 +55,9 @@ class School extends Component {
             </Row>
             <Row>
               <img src={halal} style={{ height: "30px" }} />{" "}
-              <h3>Halal Options</h3>
+              <strike>
+                <h3>Halal Options</h3>
+              </strike>
               <br />
             </Row>
             <Row>
@@ -78,7 +80,9 @@ class School extends Component {
             </Row>
             <Row>
               <img src={cel} style={{ height: "30px" }} />{" "}
-              <h3>Muslim Celebrations</h3>
+              <strike>
+                <h3>Muslim Celebrations</h3>{" "}
+              </strike>
               <br />
             </Row>
             <Row>
