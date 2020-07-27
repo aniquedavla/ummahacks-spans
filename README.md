@@ -21,4 +21,4 @@ Muslim-friendly is a platform that allows Muslims to voice opinions about the "m
 
 ## Schema
 <p float="left">
-<img src="https://i.ibb.co/wgM2VVX/116426405-283119122950303-8280374001181337512-n.png" alt="116426405-283119122950303-8280374001181337512-n" border="0"></p>
+<img src="https://pasteboard.co/JjyFxfC.png" alt="116426405-283119122950303-8280374001181337512-n" border="0"></p>
