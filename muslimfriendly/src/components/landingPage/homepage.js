@@ -3,7 +3,7 @@ import backgroundImage from "../../images/background.png";
 import "./homepage.css";
 import ReactSearchBox from "react-search-box";
 import unity from "../../images/unit.png";
-
+import { Row, Col } from "react-bootstrap";
 class HomePage extends Component {
   data = [
     {
@@ -51,11 +51,24 @@ class HomePage extends Component {
           </div>
         </div>
         <div>
-          <div className="MissionState">
-            Muslim Friendly Mission <br />
-            Statement
-            <img src={unity} />
-          </div>
+          <Row>
+            <Col>
+              <div className="MissionState">
+                Muslim Friendly Mission <br />
+                Statement
+              </div>
+              <div className="mission">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </Col>
+            <Col className="unit">
+              {" "}
+              <img src={unity} style={{ width: "500px" }} />
+            </Col>
+          </Row>
         </div>
       </div>
     );
