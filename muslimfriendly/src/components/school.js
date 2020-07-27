@@ -161,10 +161,12 @@ class School extends Component {
             </Row>
             <br />
             <h3 style={{ textAlign: "left", fontSize: "20px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              SJSU has an amazing prayer space. I have never seen a college
+              campus have a wudu area like the one you would see at a mosque.
+              They have a dedicated wudu space in their meditation room. One can
+              sit down and make wudu like the masjid(I don't even have that at
+              my house!). The prayer space is small and the school does not have
+              halal food options on campus.
             </h3>
           </div>
         </Row>
