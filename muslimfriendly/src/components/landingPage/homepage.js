@@ -8,28 +8,33 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 class HomePage extends Component {
-  data = [
-    {
-      key: "San",
-      value: "San Jose State University",
-    },
-    {
-      key: "San",
-      value: "San Francisco University",
-    },
-    {
-      key: "mary",
-      value: "Mary Phillips",
-    },
-    {
-      key: "robert",
-      value: "Robert",
-    },
-    {
-      key: "karius",
-      value: "Karius",
-    },
-  ];
+  constructor(props){
+    super(props);
+    this.state = ({
+      data : [
+        {
+          key: "San",
+          value: "San Jose State University",
+        },
+        {
+          key: "San",
+          value: "San Francisco University",
+        },
+        {
+          key: "mary",
+          value: "Mary Phillips",
+        },
+        {
+          key: "robert",
+          value: "Robert",
+        },
+        {
+          key: "karius",
+          value: "Karius",
+        },
+      ],
+    });
+  }
   render() {
     return (
       <div>
@@ -48,7 +53,7 @@ class HomePage extends Component {
             <ReactSearchBox
               placeholder="Search"
               value=""
-              data={this.data}
+              data={this.state.data}
               callback={(record) => console.log(record)}
             />
             <br />

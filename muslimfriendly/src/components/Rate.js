@@ -1,14 +1,23 @@
 import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
+
+import {Form, FormGroup} from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import Slider from "@material-ui/core/Slider";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+
+
 class Rate extends Component {
+  constructor(props){
+    super(props)
+    this.state = ({
+      "schoolName": "San Jose State Univerisity", //this.props.schoolName,
+    });
+  }
   render() {
     return (
       <div>
-        <h1>San Jose State University</h1>
+        <h1>Rate: {this.state.schoolName}</h1>
         <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -28,10 +37,10 @@ class Rate extends Component {
                 type={type}
                 id={`default-${type}`}
                 label={`Prayer Space options?`}
-              />
+               />
             </div>
           ))}
-        </Form>
+        
         <div style={{ textAlign: "left" }}>
           <h3 style={{ textAlign: "left", paddingLeft: "20px" }}>
             Rate Prayer Space
@@ -47,7 +56,7 @@ class Rate extends Component {
             valueLabelDisplay="auto"
           />
         </div>
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Halal options?`} className="mb-3">
               <Form.Check
@@ -57,8 +66,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <div style={{ textAlign: "left" }}>
+        </FormGroup>
+      
+        <FormGroup style={{ textAlign: "left" }}>
           <h3 style={{ textAlign: "left", paddingLeft: "20px" }}>
             Rate Wudu Area
           </h3>
@@ -72,9 +82,9 @@ class Rate extends Component {
             max={5}
             valueLabelDisplay="auto"
           />
-        </div>
+        </FormGroup>
 
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Muslim Leadership?`} className="mb-3">
               <Form.Check
@@ -84,8 +94,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <div style={{ textAlign: "left" }}>
+        </FormGroup>
+
+        <FormGroup style={{ textAlign: "left" }}>
           <h3 style={{ textAlign: "left", paddingLeft: "20px" }}>
             Rate Muslim Leadership
           </h3>
@@ -99,9 +110,9 @@ class Rate extends Component {
             max={5}
             valueLabelDisplay="auto"
           />
-        </div>
+        </FormGroup>
 
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Muslim Leadership?`} className="mb-3">
               <Form.Check
@@ -111,8 +122,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <div style={{ textAlign: "left" }}>
+        </FormGroup>
+
+        <FormGroup style={{ textAlign: "left" }}>
           <h3 style={{ textAlign: "left", paddingLeft: "20px" }}>
             Rate Clothing Flexibility
           </h3>
@@ -126,9 +138,9 @@ class Rate extends Component {
             max={5}
             valueLabelDisplay="auto"
           />
-        </div>
+        </FormGroup>
 
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Halal options?`} className="mb-3">
               <Form.Check
@@ -138,8 +150,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        </FormGroup>
+
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Halal options?`} className="mb-3">
               <Form.Check
@@ -149,8 +162,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        </FormGroup>
+        
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Beard options?`} className="mb-3">
               <Form.Check
@@ -160,8 +174,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        </FormGroup>
+
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Beard options?`} className="mb-3">
               <Form.Check
@@ -171,8 +186,9 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
-        <Form style={{ textAlign: "left", paddingLeft: "10px" }}>
+        </FormGroup>
+
+        <FormGroup style={{ textAlign: "left", paddingLeft: "10px" }}>
           {["checkbox"].map((type) => (
             <div key={`Beard options?`} className="mb-3">
               <Form.Check
@@ -182,13 +198,13 @@ class Rate extends Component {
               />
             </div>
           ))}
-        </Form>
+        </FormGroup>
 
         <br />
         <Link to="/thanks">
           <Button> Submit</Button>
         </Link>
-
+      </Form>
         <br />
         <br />
       </div>
