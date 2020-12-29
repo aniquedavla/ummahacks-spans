@@ -11,7 +11,7 @@
 .headingT {
   text-align: center;
   font: Light 99px/149px Kohinoor Telugu;
-  font-size: 90px;
+  /* font-size: 90px; */
   font-weight: 100;
   letter-spacing: 3.46px;
   color: #ffffff;
@@ -21,8 +21,8 @@
 .MissionState {
   top: 1923px;
   left: 66px;
-  width: 932px;
-  height: 232px;
+  /* width: 932px;
+  height: 232px; */
   text-align: left;
   font: Light 99px/149px Kohinoor Telugu;
   font-size: 50px;
@@ -40,9 +40,9 @@
 
 .mission {
   padding-top: -70px;
-  font-size: 30px;
+  font-size: 30rem;
   width: 600px;
-  height: 232px;
+  /* height: 232px; */
   text-align: left;
   font: Light 99px/149px Kohinoor Telugu;
   font-weight: 100;
