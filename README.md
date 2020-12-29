@@ -1,79 +1,68 @@
-# ummahacks-spans
-# Muslim Friendly
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-MuslimFriendly is dedicated to bringing transparency in Muslim inclusivity at colleges, universities, and workplaces worldwide.
+## Available Scripts
 
-## Table of Contents
-1. [Overview](#Overview)
-1. [User Stories](#User-Stories)
-1. [Wireframes](#Wireframes)
-1. [Schema](#Schema)
+In the project directory, you can run:
 
-## Overview
-### Description
-Muslim-friendly is a platform that allows Muslims to voice opinions about the "muslim-friendliness" of their colleges. The college reviews are intentioned to help incoming freshmen make informed decisions about their choice of college by providing them insight into the place's culture. Ratings for each college are calculated holistically; the presence--as well as the quality--of facilities such as prayer rooms and wudu areas, in addition to accommodations such as halal food options, are considered.
+### `yarn start`
 
-## User Stories
-### User searches for a school's ratings
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-User lands on the splash screen for muslimfriendly.fyi and reads through the mission statement
-<add screenshot>
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-User searches for a specific school through the search bar
-<add screenshot>
+### `yarn test`
 
-User selects a school from the autocomplete drop-down and is directed to a page containing information about that school
-<add screenshot>
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-User views the ratings for a school
-<br >
+### `yarn build`
 
-<img src="./search.png" width=400>
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### User submits a rating for a school
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-User searches for a specific school through the search bar
-<br >
-<img src="./review.png" width=400>
+### `yarn eject`
 
-User selects a school from the autocomplete drop-down and is directed to a page containing information about that school
-<add screenshot>
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-User selects the option to add a rating for the displayed school
-<add screenshot>
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-User is prompted to login, if he/she isn't already logged in
-<add screenshot>
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-User enters information in the ratings form about the school
-<add screenshot>
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-User submits the ratings
-<add screenshot>
+## Learn More
 
-User sees the confirmation screen
-<add screenshot>
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### User logs in to his/her profile
+### Code Splitting
 
-User lands on the splash screen for muslimfriendly.fyi
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-User uses the buttons from the top menu to begin logging in
+### Analyzing the Bundle Size
 
-User is prompted for his/her login credentials
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-User is logged in, if the credentials are correct
+### Making a Progressive Web App
 
-User is prompted to re-enter information if credentials are incorrect
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
+### Advanced Configuration
 
-## Wireframes
-<p float="left">
-<img src="wireframe.png" alt="Screen-Shot-2020-07-27-at-12-07-33-AM" border="0">
-</p>
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-## Schema
-<p float="left">
-<img src="./schema.PNG" border="0"></p>
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
