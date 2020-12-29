@@ -13,7 +13,7 @@ class NavBar extends Component {
             height="30"
             className="d-inline-block align-top"
           />
-          {"  "}
+          {"   "}
           muslim friendly
         </Navbar.Brand>
       </Navbar>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./images/moon.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,19 +17,26 @@ import {
   MuiThemeProvider,
 } from "@material-ui/core";
 import RateForm from "./pages/Rate/RateForm";
+import withTracker from './components/React-GA/withTracker';
+import ReactGA from 'react-ga';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 function App() {
+
+  useEffect(() => {           
+      ReactGA.initialize("257392625"); 
+  }, []);
+
   return (
     <div className="App">
     <MuiThemeProvider theme={theme}>
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/rate" component={RateForm} />
+          <Route exact path="/" component={withTracker(HomePage)} />
+          <Route exact path="/rate" component={withTracker(RateForm)} />
           {/* <Route exact path="/school/:schoolName" render={(props)=>{
             let schoolPathName = props.location.pathname.replace("/school/","");
             let school = schoolData.filter((school)=>{
@@ -47,7 +54,7 @@ function App() {
           }} /> */}
           {/* <Route exact path="/Rate" component={Rate} /> */}
           {/* <Route exact path="/thanks" component={Thank} /> */}
-          <Route default path="/notfound" component={NotFoundPage}/>
+          <Route default path="/notfound" component={withTracker(NotFoundPage)}/>
         </Switch>
       </Router>
       </MuiThemeProvider>

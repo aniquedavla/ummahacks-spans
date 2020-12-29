@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     align: "left",
     font: "Light 99px/149px Kohinoor Telugu",
     fontSize: '3rem',
-    fontWeight: 400,
+    fontWeight: 350,
     letterSpacing: '.05em',
     paddingLeft: '4.5rem',
     paddingTop: '2rem',
@@ -24,9 +24,9 @@ const useStyles = makeStyles({
   body1: {
     font: "Light 99px/149px Kohinoor Telugu",
     fontSize: '2rem',
-    fontWeight: 10,
+    fontWeight: 5,
     letterSpacing: '.05em',
-    padding: '0 2rem 2rem 4.2rem',
+    padding: '0 2rem 2rem 4.5rem',
   },
   buttonGrid:{
     paddingTop:"4rem"
@@ -56,6 +56,21 @@ const useStyles = makeStyles({
        textAlign:'center',
        position: 'relative',
   },
+  disabledButtonStyle:{
+     display:"inline-block",
+     padding:"0.7em 1.4em",
+     margin:"0 0.3em 0.3em 0",
+     borderRadius: "0.15em",
+     boxSizing: "border-box",
+     fontFamily:"'Roboto',sans-serif",
+     textTransform:"uppercase",
+     fontWeight:400,
+     color:"#FFFFFF",
+     backgroundColor:"#909090",
+     boxShadow:"inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17)",
+     textAlign:'center',
+     position: 'relative',
+},
 });
 
 export default function HomePage(){
@@ -77,8 +92,12 @@ export default function HomePage(){
               </Typography>
               <Grid container className={classes.buttonGrid} spacing={4} justify="center">
                 <Grid item>
+                  <Typography variant="contained" className={classes.disabledButtonStyle}>
+                    View a rating
+                  </Typography>
+                  <br/>
                   <Typography variant="contained" className={classes.disabledText}>
-                    View a rating <br/>(Coming soon!)
+                    (Coming soon!)
                   </Typography>
                 </Grid>
                 <Grid item>
