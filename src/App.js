@@ -17,20 +17,24 @@ import {
   MuiThemeProvider,
 } from "@material-ui/core";
 import RateForm from "./pages/Rate/RateForm";
+import ReactGA from "react-ga";
+import withTracker from "./components/React-GA/withTracker";
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 function App() {
-
+  useEffect(()=>{
+    ReactGA.initialize("257392625");
+  });
   return (
     <div className="App">
     <MuiThemeProvider theme={theme}>
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/rate" component={RateForm} />
+          <Route exact path="/" component={withTracker(HomePage)} />
+          <Route exact path="/rate" component={withTracker(RateForm)} />
           {/* <Route exact path="/school/:schoolName" render={(props)=>{
             let schoolPathName = props.location.pathname.replace("/school/","");
             let school = schoolData.filter((school)=>{

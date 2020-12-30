@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect }from "react";
 import backgroundImage from "../../images/background.png";
 import "./homepage.css";
 import ReactSearchBox from "react-search-box";
@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import {Container, Grid, Button} from '@material-ui/core/';
 import { styled } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles({
   heading2: {
@@ -75,11 +76,15 @@ const useStyles = makeStyles({
 
 export default function HomePage(){
     const classes = useStyles();
+    useEffect(()=>{
+      ReactGA.initialize("257392625");
+      ReactGA.set(window.location.pathname + window.location.search);
+    }, []);
     return (
       <>
         <Container fixed>
             <div
-              classname="Banner"
+              className="Banner"
               style={{
                 backgroundImage: `url(${backgroundImage})`,
                 height: "35rem",
@@ -92,11 +97,11 @@ export default function HomePage(){
               </Typography>
               <Grid container className={classes.buttonGrid} spacing={4} justify="center">
                 <Grid item>
-                  <Typography variant="contained" className={classes.disabledButtonStyle}>
+                  <Typography className={classes.disabledButtonStyle}>
                     View a rating
                   </Typography>
                   <br/>
-                  <Typography variant="contained" className={classes.disabledText}>
+                  <Typography className={classes.disabledText}>
                     (Coming soon!)
                   </Typography>
                 </Grid>
