@@ -25,7 +25,7 @@ theme = responsiveFontSizes(theme);
 
 function App() {
   useEffect(()=>{
-    ReactGA.initialize("257392625");
+    ReactGA.initialize("UA-84778445-2");
   });
   return (
     <div className="App">

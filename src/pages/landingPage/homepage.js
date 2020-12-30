@@ -77,7 +77,7 @@ const useStyles = makeStyles({
 export default function HomePage(){
     const classes = useStyles();
     useEffect(()=>{
-      ReactGA.initialize("257392625");
+      ReactGA.initialize("UA-84778445-2");
       ReactGA.set(window.location.pathname + window.location.search);
     }, []);
     return (

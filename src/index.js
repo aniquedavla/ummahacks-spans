@@ -5,6 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ReactGA from "react-ga";
 
+ReactGA.initialize("UA-84778445-2");
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
