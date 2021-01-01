@@ -16,9 +16,10 @@ import {
   responsiveFontSizes,
   MuiThemeProvider,
 } from "@material-ui/core";
-import RateForm from "./pages/Rate/RateForm";
 import ReactGA from "react-ga";
 import withTracker from "./components/React-GA/withTracker";
+import RateForm from "./pages/Rate/RateForm";
+import SchoolViewRating from "./pages/ViewRating/SchoolViewRating.js"
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -34,6 +35,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={withTracker(HomePage)} />
+          <Route exact path="/viewrating" component={SchoolViewRating}/>
           <Route exact path="/rate" component={withTracker(RateForm)} />
           {/* <Route exact path="/school/:schoolName" render={(props)=>{
             let schoolPathName = props.location.pathname.replace("/school/","");
