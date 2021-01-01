@@ -8,7 +8,7 @@ export default function RateForm(){
       });
     return(
         <>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrIszaUXHVIz6U6V?backgroundColor=gray" frameborder="0" onmousewheel="" width="100%" height="1200"></iframe>
+        <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrIszaUXHVIz6U6V?backgroundColor=gray" frameborder="0" onmousewheel="" width="100%" height="3394"></iframe>
         </>
     );
 }
