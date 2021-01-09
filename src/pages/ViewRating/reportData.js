@@ -30,5 +30,10 @@ let reportData = {
        ],
        "email":"ohid.14@gmail.com"
     },
-    "id":"recHLEH5Ac96P7wLk"
+    "id":"recHLEH5Ac96P7wLk",
+    "comments": [
+       "SJSU has an amazing prayer space. I have never seen a college campus have a wudu area like the one you would see at a mosque. They have a dedicated wudu space in their meditation room. One can sit down and make wudu like the masjid(I don't even have that at my house!). The prayer space is small and the school does not have halal food options on campus.",
+       "SJSU has an amazing prayer space. I have never seen a college campus have a wudu area like the one you would see at a mosque. They have a dedicated wudu space in their meditation room. One can sit down and make wudu like the masjid(I don't even have that at my house!). The prayer space is small and the school does not have halal food options on campus.",
+       "SJSU has an amazing prayer space. I have never seen a college campus have a wudu area like the one you would see at a mosque. They have a dedicated wudu space in their meditation room. One can sit down and make wudu like the masjid(I don't even have that at my house!). The prayer space is small and the school does not have halal food options on campus.",
+    ],
  }

@@ -15,14 +15,14 @@ export default function ColumnData(props){
         showField &&
         fieldItems.push(
           <Grid item lg={4} md={4} xs={12}>
-            <h3><img src={field.img} style={{ height: "30px" }} /> {field.label}</h3>
+            <Typography variant="h5"><img src={field.img} style={{ height: "30px" }} /> {field.label}</Typography>
           </Grid>
         );
       } else if(columnType === "rating"){
         showField &&
         fieldItems.push(
-          <Grid item lg={4} md={4} xs={12}>
-            <h3>{field.label}</h3>
+          <Grid item lg={6} md={6} xs={12}>
+            <Typography variant="h5">{field.label}</Typography>
             <Rating value={showField} readOnly></Rating>
           </Grid>
         );

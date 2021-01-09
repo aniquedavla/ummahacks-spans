@@ -42,8 +42,23 @@ const amenityFields = [
       id: "Rate Muslim staff presence on campus"
     },
     {
-      label: "Muslim staff presence",
-      id: "Rate Muslim staff presence on campus"
-    }
-
+      label: "Muslim student leadership",
+      id: "Rate Muslim student leadership on campus"
+    },
+    {
+      label: "On-campus halal food options",
+      id: "Rate on-campus halal food options"
+    },
+    {
+      label: "Comfort wearing traditional/cultural/Islamic clothing",
+      id: "How comfortable are students wearing traditional/cultural/Islamic clothing?"
+    },
+    {
+      label: "Beard friendliness",
+      id: "Rate beard friendliness"
+    },
+    {
+      label: "Hijab friendliness",
+      id: "Rate hijab friendliness"
+    },
   ];
