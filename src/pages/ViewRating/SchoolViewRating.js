@@ -6,9 +6,8 @@ import Button from "react-bootstrap/Button";
 import { Link, useParams, Redirect } from "react-router-dom";
 import SchoolHeading from "./SchoolHeading";
 import { Container } from '@material-ui/core';
-import RatingColumn from './RatingColumn';
 import Coments from "./Coments";
-import TwoColumnData from './TwoColumnData';
+import ColumnData from './ColumnData';
 import {amenityFields, ratingFields} from "./Fields";
 import {reportData} from "./reportData";
 export default function SchoolViewRating(props){
@@ -16,8 +15,14 @@ export default function SchoolViewRating(props){
     return (
       <Container>
         <SchoolHeading schoolName="San Jose State University" numberOfReviews={35}></SchoolHeading>
-        <TwoColumnData columnTitle="Inclusive Amenities" fields={amenityFields} data={reportData.fields}></TwoColumnData>
-        <RatingColumn></RatingColumn>
+        <ColumnData columnTitle="Inclusive Amenities" fields={amenityFields} 
+          data={reportData.fields} 
+          columnType="amenities">
+        </ColumnData>
+        <ColumnData columnTitle="Ratings" fields={ratingFields} 
+          data={reportData.fields} 
+          columnType="rating">
+        </ColumnData>
         <Coments></Coments>
       </Container>
     );
