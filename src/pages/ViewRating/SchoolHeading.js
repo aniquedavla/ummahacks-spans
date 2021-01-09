@@ -32,7 +32,7 @@ export default function SchoolHeading(props){
                     justify="space-between"
                     alignItems="flex-start"
                 >
-                    <Grid item md={8}><Typography variant="h3">{schoolName}</Typography></Grid>
+                    <Grid item md={8}><Typography variant="h4">{schoolName}</Typography></Grid>
                     <Grid item md={8} className={classes.totalRating}>
                         <Typography variant="h5"><img src={star} style={{ height: "30px" }}/>({numberOfReviews} Reviews)</Typography>
                     </Grid>

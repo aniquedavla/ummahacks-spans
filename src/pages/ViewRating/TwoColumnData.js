@@ -1,64 +1,32 @@
 import React from 'react';
-import {Grid, Button, Container} from "@material-ui/core";
+import {Grid, Button, Container, Typography, Box} from "@material-ui/core";
+import Rating from "@material-ui/lab/Rating";
 
-export default function TwoColumnData(){
-  const f
-    return(
-    <>
-          <h3 style={{ paddingLeft: "30px" }}>Inclusive Amenities</h3>
-          <Grid container>
-            <Grid item>
-              <img src={sajadah} style={{ height: "30px" }} />{" "}
-              <h3> Prayer Space</h3>
-              <br />
-            </Grid>
-            <Grid>
-              <img src={wudu} style={{ height: "30px" }} /> <h3> Wudu Area</h3>
-              <br />
-            </Grid>
-            <Row>
-              <img src={halal} style={{ height: "30px" }} />{" "}
-              <strike>
-                <h3>Halal Options</h3>
-              </strike>
-              <br />
-            </Row>
-            <Row>
-              <img src={hijab} style={{ height: "30px" }} />{" "}
-              <h3>Hijab Friendly</h3>
-              <br />
-            </Row>
-          </Col>
-          <Col>
-            <br />
-            <br />
-            <Row>
-              <img src={beard} style={{ height: "30px" }} />
-              {"  "}
-              <h3>
-                {" "}
-                <span></span>Beard Friendly
-              </h3>
-              <br />
-            </Row>
-            <Row>
-              <img src={cel} style={{ height: "30px" }} />{" "}
-              <strike>
-                <h3>Muslim Celebrations</h3>{" "}
-              </strike>
-              <br />
-            </Row>
-            <Row>
-              <img src={lead} style={{ height: "30px" }} />{" "}
-              <h3>Muslim Leadership</h3>
-              <br />
-            </Row>
-            <Row>
-              <img src={mlead} style={{ height: "30px" }} />{" "}
-              <h3>Muslim Woman Leadership</h3>
-              <br />
-            </Row>
+export default function TwoColumnData(props){
+    let columnTitle = props.columnTitle;
+    let fields = props.fields;
+    let data = props.data;
+    let fieldItems = [];
+    fields.map((field)=>{
+      console.log(field.id, data[field.id]);
+      let showField = data[field.id];
+      showField &&
+        fieldItems.push(
+          <Grid item lg={4} md={4} xs={12}>
+            <h3><img src={field.img} style={{ height: "30px" }} /> {field.label}</h3>
           </Grid>
-    </>
+        );
+    })
+    return(
+    <Box>
+          <Typography variant="h5" align="left">{columnTitle}</Typography>
+          <Grid container
+            direction="row"
+            justify="flex-start"
+            alignItems="flex-start"
+          >
+            {fieldItems}            
+          </Grid>
+    </Box>
     );
 }

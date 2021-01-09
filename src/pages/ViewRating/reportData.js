@@ -1,4 +1,7 @@
-{
+export {
+   reportData,
+};
+let reportData = {
     "createdTime":"2020-12-31T19:39:56.000Z",
     "fields":{
        "Add a Muslim student org that we missed":"Bangladeshi Students Association, Yemeni Students Association, Egyptian Students Association, Students Organized for Syria",
