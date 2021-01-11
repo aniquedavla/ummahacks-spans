@@ -9,7 +9,9 @@ import {Container, Grid, Button} from '@material-ui/core/';
 import { styled } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactGA from "react-ga";
-
+import DynamicForm from "../DynamicForm/DynamicForm";
+import {schoolSearchFields} from "../ViewRating/Fields";
+import {schools} from "../ViewRating/reportData";
 const useStyles = makeStyles({
   heading2: {
     align: "left",
@@ -97,9 +99,10 @@ export default function HomePage(){
               </Typography>
               <Grid container className={classes.buttonGrid} spacing={4} justify="center">
                 <Grid item>
-                  <Typography className={classes.disabledButtonStyle}>
+                  {/* <Typography className={classes.disabledButtonStyle}>
                     View a rating
-                  </Typography>
+                  </Typography> */}
+                  <DynamicForm fields={schoolSearchFields} options={schools} submitLabel="Submit"></DynamicForm>
                   <br/>
                   <Typography className={classes.disabledText}>
                     (Coming soon!)

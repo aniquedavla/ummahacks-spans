@@ -9,7 +9,8 @@ import mlead from "./images/woma.png";
 
 export {
     amenityFields,
-    ratingFields
+    ratingFields,
+    schoolSearchFields
 };
 const amenityFields = [
     {
@@ -62,3 +63,11 @@ const amenityFields = [
       id: "Rate hijab friendliness"
     },
   ];
+const schoolSearchFields = [
+  {
+    label: "Search a school",
+    id: "search-school",
+    type: "autocomplete"
+  },
+  
+];

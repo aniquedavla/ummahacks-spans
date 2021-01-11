@@ -1,5 +1,6 @@
 export {
    reportData,
+   schools
 };
 let reportData = {
     "createdTime":"2020-12-31T19:39:56.000Z",
@@ -36,4 +37,23 @@ let reportData = {
        "SJSU has an amazing prayer space. I have never seen a college campus have a wudu area like the one you would see at a mosque. They have a dedicated wudu space in their meditation room. One can sit down and make wudu like the masjid(I don't even have that at my house!). The prayer space is small and the school does not have halal food options on campus.",
        "SJSU has an amazing prayer space. I have never seen a college campus have a wudu area like the one you would see at a mosque. They have a dedicated wudu space in their meditation room. One can sit down and make wudu like the masjid(I don't even have that at my house!). The prayer space is small and the school does not have halal food options on campus.",
     ],
- }
+ };
+ 
+ const schools = [
+   {
+       "id": "35b2dfb8-15bf-4a09-bb61-014c297091b5",
+       "schoolName": "San Jose State University"
+   },
+   {
+      "id": "45b13c4c-dc32-416d-a112-eb2927d6d702",
+      "schoolName": "San Francisco State University"
+   },
+   {
+      "id": "4f86a0f7-94a5-4829-b471-0b0986cd6b4f",
+      "schoolName": "University of California, Davis"
+   },
+   {
+      "id": "d6d2bfa7-bd29-416e-8d3f-599df9f85287",
+      "schoolName": "University of Michigan, Ann Arbor"
+   },
+];
