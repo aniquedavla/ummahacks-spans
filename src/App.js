@@ -35,23 +35,9 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={withTracker(HomePage)} />
-          <Route exact path="/viewrating" component={SchoolViewRating}/>
+          {/* <Route exact path="/viewrating" component={SchoolViewRating}/> */}
           <Route exact path="/rate" component={withTracker(RateForm)} />
-          {/* <Route exact path="/school/:schoolName" render={(props)=>{
-            let schoolPathName = props.location.pathname.replace("/school/","");
-            let school = schoolData.filter((school)=>{
-              return school.id == schoolPathName;
-            });
-            
-            if(school[0] && school[0].id == schoolPathName){
-              return (
-                <School schoolData={school}/>
-              )
-            } else {
-              return (<Redirect to="/notfound"></Redirect>);
-            }
-            
-          }} /> */}
+          <Route exact path="/viewrating/:schoolName" children={<SchoolViewRating />}></Route>
           {/* <Route exact path="/Rate" component={Rate} /> */}
           {/* <Route exact path="/thanks" component={Thank} /> */}
           <Route default path="/notfound" component={NotFoundPage}/>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
@@ -14,14 +14,31 @@ const useStyles = makeStyles({
   });
 
 export default function DynamicAutocomplete(props){
-  let {options, field} = props;
-  let {label} = field;
+  let {options, field, setValue, register} = props;
+  let {label, id} = field;
 
+  useEffect(()=>{
+    register(
+      {name: id},
+      {
+        required: {
+          value: true,
+          message: label + "is required"
+        }
+      }
+    )
+  }, []);
+  
+  const onChange = (event, data)=>{
+    console.log(id, data.schoolName);
+    console.log(setValue);
+    if(data) setValue(id, data.schoolName);
+  }
   const classes = useStyles();
   return (
       <Autocomplete
-        id="school-select"
-        style={{ width: 300 }}
+        id={id}
+        style={{ width: 350 }}
         options={options}
         classes={{
           option: classes.option,
@@ -33,6 +50,7 @@ export default function DynamicAutocomplete(props){
             {option.schoolName}
           </React.Fragment>
         )}
+        onChange = {onChange}
         renderInput={(params) => (
           <TextField
             {...params}
