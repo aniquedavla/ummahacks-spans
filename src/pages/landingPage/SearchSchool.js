@@ -8,16 +8,18 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import { useHistory  } from "react-router-dom";
 const styles = makeStyles({
-    root:{
-        padding: "1rem 0 1rem 1rem",
-        margin: "0 .5rem 0 .5rem"
+    formRoot: {
+        background: "#fff",
+        border: "4px solid #4472ca",
+        borderRadius: "5px 0 0 5px"
     },
     formFieldItem: {
 
     },
     submitButton: {
-        marginTop: 1,
-        paddingLeft: "2rem"        
+        //border: "2px solid #00B4CC",
+        //background: "#00B4CC",
+        // paddingLeft: "2rem"        
     }
 });
 
@@ -33,10 +35,11 @@ export default function SearchSchool(){
     }
     return(
         <>
-            <Paper className={classes.root}>
-                <DynamicForm styleClasses={classes} fields={schoolSearchFields} options={schools} submitLabel="View a rating" submitButton={submitButton} formSubmitCallback={searchSchoolSubmitCallback}>
-                </DynamicForm>
-            </Paper>
+            <DynamicForm styleClasses={classes} fields={schoolSearchFields} options={schools} submitLabel="View a rating" submitButton={submitButton} formSubmitCallback={searchSchoolSubmitCallback}>
+            </DynamicForm>
+            {/* <Paper className={classes.root}>
+               
+            </Paper> */}
         </>
     );
 }

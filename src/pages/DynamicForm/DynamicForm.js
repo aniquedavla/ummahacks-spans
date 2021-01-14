@@ -15,15 +15,16 @@ export default function DynamicForm(props){
     return(
         <>
         <form onSubmit={handleSubmit(formSubmit)}>
-            <Grid container spacing={2} justify="center">
+            <Grid container spacing={4} justify="center" className={styleClasses.formRoot}>
                 {fields.map((field)=>{
-                    return (<Grid item md={8} xs={8}>{getField(field, options,  register, watch, errors, setValue)}</Grid>);
+                    let {xs, md} = field.gridWidth
+                    return (<Grid item xs={xs} md={md}>{getField(field, options,  register, watch, errors, setValue)}</Grid>);
                 })}
-            {/*render default submit button if not passed in */}
-            <Grid item md={4} xs={4} className={styleClasses.submitButton}>
-                {!submitButton && <Button type="submit" variant="contained" color="primary">{submitLabel}</Button>}
-                {submitButton ? submitButton : ""}
-            </Grid>
+                {/*render default submit button if not passed in */}
+                <Grid item md={4} xs={2}>
+                    {!submitButton && <Button className={styleClasses.submitButton} type="submit" variant="contained" color="primary">{submitLabel}</Button>}
+                    {submitButton ? submitButton : ""}
+                </Grid>
             </Grid>
             
         </form>

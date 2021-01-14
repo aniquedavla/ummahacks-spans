@@ -67,7 +67,11 @@ const schoolSearchFields = [
   {
     label: "Search a school",
     id: "search-school",
-    type: "autocomplete"
+    type: "autocomplete",
+    gridWidth: {
+      xs: 10,
+      md: 8
+    }
   },
   
 ];

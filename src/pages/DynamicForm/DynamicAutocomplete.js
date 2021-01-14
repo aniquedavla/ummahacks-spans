@@ -4,6 +4,10 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+    root: {
+        // border: "3px solid #00B4CC",
+        // borderRadius: "5px 0 0 5px"
+    },
     option: {
       fontSize: 15,
       '& > span': {
@@ -72,6 +76,7 @@ React.useEffect(() => {
   return (
       <Autocomplete
         id={id}
+        //freeSolo
         style={{ width: 350 }}
         options={options}
         open={open}
@@ -82,6 +87,7 @@ React.useEffect(() => {
           setOpen(false);
         }}
         classes={{
+          root: classes.root,
           option: classes.option,
         }}
         autoHighlight
@@ -99,7 +105,7 @@ React.useEffect(() => {
             variant="outlined"
             inputProps={{
               ...params.inputProps,
-              autoComplete: 'new-password', // disable autocomplete and autofill
+              // autoComplete: 'new-password', // disable autocomplete and autofill
             }}
           />
         )}
