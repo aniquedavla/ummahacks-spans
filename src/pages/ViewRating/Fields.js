@@ -69,7 +69,7 @@ const schoolSearchFields = [
     id: "search-school",
     type: "autocomplete",
     gridWidth: {
-      xs: 10,
+      xs: 8,
       md: 8
     }
   },

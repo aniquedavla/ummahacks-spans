@@ -5,8 +5,8 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
-        // border: "3px solid #00B4CC",
-        // borderRadius: "5px 0 0 5px"
+        border: "2px solid #4472ca",
+        borderRadius: ".5em"
     },
     option: {
       fontSize: 15,
@@ -69,7 +69,7 @@ React.useEffect(() => {
 }, [open]);
   const onChange = (event, data)=>{
     console.log(id, data);
-    console.log("Autocomplete data", data["NAME"]);
+    //console.log("Autocomplete data", data["NAME"]);
     if(data) {setValue(id, data["NAME"]);}
   }
   const classes = useStyles();
@@ -87,7 +87,7 @@ React.useEffect(() => {
           setOpen(false);
         }}
         classes={{
-          root: classes.root,
+          //root: classes.root,
           option: classes.option,
         }}
         autoHighlight
@@ -101,7 +101,11 @@ React.useEffect(() => {
         renderInput={(params) => (
           <TextField
             {...params}
-            label={label}
+            // label={label}
+            classes={{
+              root: classes.root,
+            }}
+            placeholder={label}
             variant="outlined"
             inputProps={{
               ...params.inputProps,

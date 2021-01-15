@@ -10,8 +10,8 @@ import { useHistory  } from "react-router-dom";
 const styles = makeStyles({
     formRoot: {
         background: "#fff",
-        border: "4px solid #4472ca",
-        borderRadius: "5px 0 0 5px"
+        border: "2px solid #fff",
+        borderRadius: ".5em"
     },
     formFieldItem: {
 

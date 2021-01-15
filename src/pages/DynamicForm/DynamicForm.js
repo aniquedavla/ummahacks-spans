@@ -21,7 +21,7 @@ export default function DynamicForm(props){
                     return (<Grid item xs={xs} md={md}>{getField(field, options,  register, watch, errors, setValue)}</Grid>);
                 })}
                 {/*render default submit button if not passed in */}
-                <Grid item md={4} xs={2}>
+                <Grid item md={4} xs={4}>
                     {!submitButton && <Button className={styleClasses.submitButton} type="submit" variant="contained" color="primary">{submitLabel}</Button>}
                     {submitButton ? submitButton : ""}
                 </Grid>
