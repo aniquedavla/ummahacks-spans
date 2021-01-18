@@ -20,6 +20,7 @@ import ReactGA from "react-ga";
 import withTracker from "./components/React-GA/withTracker";
 import RateForm from "./pages/Rate/RateForm";
 import SchoolViewRating from "./pages/ViewRating/SchoolViewRating.js"
+import RateForm2 from "./pages/Rate/RateForm2";
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/" component={withTracker(HomePage)} />
           {/* <Route exact path="/viewrating" component={SchoolViewRating}/> */}
           <Route exact path="/rate" component={withTracker(RateForm)} />
+          <Route exact path="/rate2" component={RateForm2} />
           <Route exact path="/viewrating/:schoolName" children={<SchoolViewRating />}></Route>
           {/* <Route exact path="/Rate" component={Rate} /> */}
           {/* <Route exact path="/thanks" component={Thank} /> */}

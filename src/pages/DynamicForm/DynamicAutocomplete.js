@@ -1,25 +1,32 @@
 import React, { useEffect } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=> ({
     root: {
-        border: "2px solid #4472ca",
-        borderRadius: ".5em"
+      [theme.breakpoints.down('sm')]:
+        {
+          width: 250
+        },
+      [theme.breakpoints.up('md')]: {
+        width: 350
+      },
     },
     option: {
-      fontSize: 15,
+      fontSize: "1rem",
       '& > span': {
         marginRight: 10,
         fontSize: 18,
       },
     },
-  });
+  }));
 
 export default function DynamicAutocomplete(props){
-  let {field, setValue, register} = props;
-  let {label, id} = field;
+  let {field, setValue, register, styles} = props;
+  let {label, id, placeholder = false, dataURL} = field;
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
   const loading = open && options.length === 0;
@@ -42,15 +49,13 @@ export default function DynamicAutocomplete(props){
     }
   
     (async () => {
-      const response = await fetch(
-        "https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Colleges_and_Universities_Campuses/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=false&returnCentroid=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=false&quantizationParameters=&sqlFormat=none&f=pjson&token="
-      );
+      const response = await fetch(dataURL);
 
       const schoolsJSON = await response.json();
   
       if (active) {
-        console.log(schoolsJSON.features[0].attributes["NAME"]);
-        console.log(Object.keys(schoolsJSON.features).map((key) => schoolsJSON.features[key].attributes));
+        // console.log(schoolsJSON.features[0].attributes["NAME"]);
+        // console.log(Object.keys(schoolsJSON.features).map((key) => schoolsJSON.features[key].attributes));
         setOptions(Object.keys(schoolsJSON.features).map((key) => schoolsJSON.features[key].attributes))
       }
     })();
@@ -77,7 +82,7 @@ React.useEffect(() => {
       <Autocomplete
         id={id}
         //freeSolo
-        style={{ width: 350 }}
+        //style={{ width: 250 }}
         options={options}
         open={open}
         onOpen={() => {
@@ -87,7 +92,7 @@ React.useEffect(() => {
           setOpen(false);
         }}
         classes={{
-          //root: classes.root,
+          root: classes.root,
           option: classes.option,
         }}
         autoHighlight
@@ -101,11 +106,11 @@ React.useEffect(() => {
         renderInput={(params) => (
           <TextField
             {...params}
-            // label={label}
+            //label={!placeholder ? label : ""}
             classes={{
-              root: classes.root,
+              root: styles ? styles.searchAutoComplete : "",
             }}
-            placeholder={label}
+            placeholder={placeholder ? placeholder : ""}
             variant="outlined"
             inputProps={{
               ...params.inputProps,

@@ -13,14 +13,12 @@ const styles = makeStyles({
         border: "2px solid #fff",
         borderRadius: ".5em"
     },
-    formFieldItem: {
-
-    },
     submitButton: {
-        //border: "2px solid #00B4CC",
-        //background: "#00B4CC",
-        // paddingLeft: "2rem"        
-    }
+    },
+    searchAutoComplete: {
+        border: "2px solid #4472ca",
+        borderRadius: ".5em"
+    },
 });
 
 export default function SearchSchool(){
@@ -33,13 +31,17 @@ export default function SearchSchool(){
         console.log("form data", data);
         history.push(`/viewrating/${data["search-school"]}`)
     }
+    let formSettings = {
+        spacing: 4,
+        submitGridWidth: {
+            submitMd : 4, 
+            submitXs : 4
+        }
+    };
     return(
         <>
-            <DynamicForm styleClasses={classes} fields={schoolSearchFields} options={schools} submitLabel="View a rating" submitButton={submitButton} formSubmitCallback={searchSchoolSubmitCallback}>
+            <DynamicForm styleClasses={classes} fields={schoolSearchFields} options={schools} submitLabel="View a rating" submitButton={submitButton} formSubmitCallback={searchSchoolSubmitCallback} formSettings={formSettings}>
             </DynamicForm>
-            {/* <Paper className={classes.root}>
-               
-            </Paper> */}
         </>
     );
 }
