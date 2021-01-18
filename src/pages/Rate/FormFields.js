@@ -18,6 +18,12 @@ const formFields = [
         }
 
     },
+    {
+        label: "Rate prayer space",
+        description: "often referred to as meditation space",
+        id: "prayerSpaceRating", 
+        type: "rating",
+    },
 ];
 
 export {

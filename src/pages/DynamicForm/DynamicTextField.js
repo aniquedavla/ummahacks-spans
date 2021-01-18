@@ -16,13 +16,15 @@ export default function DynamicTextField({label, id, required, register, setValu
         required={required}
         variant={variant}
         inputRef={
-            register && register({
-                required: {
-                    value: required,
-                    message: label + "is required"
+            register && register(
+                {name: id}, 
+                {
+                    required: {
+                        value: required,
+                        message: label + "is required"
+                    }
                 }
-            })
-
+            )
         }
       />
     );

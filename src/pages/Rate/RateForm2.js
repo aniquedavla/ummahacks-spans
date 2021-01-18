@@ -6,7 +6,8 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const styles = makeStyles((theme)=>({
     root: {
-        [theme.breakpoints.up("md")]: {width: 500,},
+        [theme.breakpoints.up("md")]: {width: 450,},
+        [theme.breakpoints.down("xs")]: {width: 350,},
         alignItems: "center",
         justifyContent: "center",
         padding: ".5rem 2rem"
