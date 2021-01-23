@@ -28,13 +28,27 @@ export default function DynamicForm(props){
                 className={styleClasses ? styleClasses.formRoot : ""}
             >
                 {fields.map((field)=>{
-                    let {xs = 12, md = 12} = field.gridWidth ? field.gridWidth : "";
-                    return (
-                        <Grid item xs={xs} md={md}>
-                            {field.label && <LabelDescription label={field.label} description={field.description}></LabelDescription>}
-                            {getField(field, options,  register, watch, formState, setValue, styleClasses)}
-                        </Grid>
-                    );
+                    let showWhenValueInField = field.showWhenValueInField;
+                    let showValueField = showWhenValueInField ? watch(showWhenValueInField.fieldID): null;
+                    let {xs = 12, md = 12} = field.gridWidth ? field.gridWidth : ""; 
+                    if(showWhenValueInField){
+                        return (
+                            showValueField 
+                            &&
+                            <Grid item xs={xs} md={md}>
+                                {field.label && <LabelDescription label={field.label} description={field.description}></LabelDescription>}
+                                {getField(field, options,  register, watch, formState, setValue, styleClasses)}
+                            </Grid>
+                        );
+                    } else {
+                        return (
+                            <Grid item xs={xs} md={md}>
+                                {field.label && <LabelDescription label={field.label} description={field.description}></LabelDescription>}
+                                {getField(field, options,  register, watch, formState, setValue, styleClasses)}
+                            </Grid>
+                        );
+                    }
+                    
                 })}
                 {/*render default submit button if not passed in */}
                 <Grid item md={submitMd} xs={submitXs}>

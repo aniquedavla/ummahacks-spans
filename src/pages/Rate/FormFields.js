@@ -28,6 +28,10 @@ const formFields = [
         description: "often referred to as meditation space",
         id: "prayerSpaceRating", 
         type: "rating",
+        showWhenValueInField: {
+            fieldID: "hasPrayerSpace",
+            value: true
+        },
     },
 ];
 
