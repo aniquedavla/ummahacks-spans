@@ -18,6 +18,7 @@ const formFields = [
         }
 
     },
+    //Prayer Space
     {
         label: "Has prayer space/meditation room?",
         id: "hasPrayerSpace", 
@@ -31,6 +32,33 @@ const formFields = [
         showWhenValueInField: {
             fieldID: "hasPrayerSpace",
             value: true
+        },
+    },
+    //Wudu Area
+    {
+        label: "Has wudu area?",
+        id: "hasWuduArea", 
+        type: "checkbox",
+    },
+    {
+        label: "Rate wudu area",
+        id: "wuduAreaRating", 
+        type: "rating",
+        showWhenValueInField: {
+            fieldID: "hasWuduArea",
+        },
+    },
+    {
+        label: "Has on-campus halal food options?",
+        id: "hasOnCampusHalalFood", 
+        type: "checkbox",
+    },
+    {
+        label: "Rate on-campus halal food options",
+        id: "onCampusHalalFoodRating", 
+        type: "rating",
+        showWhenValueInField: {
+            fieldID: "hasOnCampusHalalFood",
         },
     },
 ];

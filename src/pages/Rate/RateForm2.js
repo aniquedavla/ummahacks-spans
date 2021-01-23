@@ -30,6 +30,7 @@ const styles = makeStyles((theme)=>({
 export default function RateForm2(){
     let classes = styles(); 
     let formLabel = "Rate a school";
+    let formDescription = "Rate a school for Muslim Friendliness.";
     let formSettings = {
         gridDirection: "column",
         spacing: 2,
@@ -39,7 +40,10 @@ export default function RateForm2(){
     }
     return(
         <Container className={classes.root}>
-            <Typography variant="h4" align="center">{formLabel}</Typography>
+            <Box>
+                <Typography variant="h4" align="left">{formLabel}</Typography>
+                <Typography variant="subtitle1" align="left">{formDescription}</Typography>
+            </Box>
             <DynamicForm fields={formFields} formSubmitCallback={submitForm} formSettings={formSettings} styleClasses={classes}></DynamicForm>
         </Container>
     );

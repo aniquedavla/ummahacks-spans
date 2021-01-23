@@ -32,7 +32,7 @@ export default function HoverRating({id, required, register, setValue}) {
   return (
     <div className={classes.root}>
       <Rating
-        name="hover-feedback"
+        name={id}
         value={value}
         onChange={(event, newValue) => {
           setValueState(newValue);
