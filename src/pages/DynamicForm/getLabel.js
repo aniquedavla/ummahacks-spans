@@ -10,8 +10,9 @@ const styles = makeStyles((theme)=>({
 export default function LabelDescription({label, description}){
     const classes = styles();
     return (
-    <InputLabel className={classes.root}>
-        <Typography variant="subtitle1">{label}</Typography>
-        <Typography variant="subtitle2">{description}</Typography>
-    </InputLabel>);
+        <InputLabel className={classes.root}>
+            <Typography variant="subtitle1">{label}</Typography>
+            <Typography variant="subtitle2">{description}</Typography>
+        </InputLabel>
+    );
 }

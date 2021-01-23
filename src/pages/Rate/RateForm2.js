@@ -8,8 +8,6 @@ const styles = makeStyles((theme)=>({
     root: {
         [theme.breakpoints.up("md")]: {width: 450,},
         [theme.breakpoints.down("xs")]: {width: 350,},
-        alignItems: "center",
-        justifyContent: "center",
         padding: ".5rem 2rem"
     },
     formRoot: {
@@ -24,7 +22,9 @@ const styles = makeStyles((theme)=>({
         },
     },
     submitButton: {
-
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     }
 }));
 export default function RateForm2(){
