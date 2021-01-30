@@ -36,7 +36,7 @@ export default function HoverRating({id, required, register, setValue, showWhenV
         name={id}
         value={value}
         onChange={(event, newValue) => {
-          // console.log("show field", watch(showWhenValueInField.field));
+          //console.log("show field", watch(showWhenValueInField.field));
           //console.log("rating ", id , newValue)
           setValueState(newValue);
           setValue(id, newValue);

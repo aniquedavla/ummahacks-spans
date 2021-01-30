@@ -16,7 +16,7 @@ export default function MUICheckbox({label, id, dependentFieldId, required, regi
 
     return(
         <Box className={classes.root}>
-            <Checkbox checked={checkedState} 
+            <Checkbox checked={checkedState}
                 color="primary"
                 onChange={(event)=>{
                     const checkedValue = event.target.checked;
@@ -24,7 +24,7 @@ export default function MUICheckbox({label, id, dependentFieldId, required, regi
                     setValue(id, checkedValue)
                     console.log("Checked value", checkedValue)
                 }} 
-                name={label} 
+                name={label}
                 inputRef={
                     register && register(
                         {name: id}, 

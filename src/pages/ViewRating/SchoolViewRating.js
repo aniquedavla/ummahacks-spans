@@ -37,11 +37,13 @@ export default function SchoolViewRating(props){
       {schoolData &&
       <Container>
         <SchoolHeading className={classes.sectionStyle} schoolName={schoolName} numberOfReviews={35}></SchoolHeading>
-        <ColumnData className={classes.sectionStyle} columnTitle="INCLUSIVE AMENITIES" fields={amenityFields} 
+        <ColumnData className={classes.sectionStyle} columnTitle="INCLUSIVE AMENITIES" 
+          fields={amenityFields} 
           data={schoolData.fields} 
           columnType="amenities">
         </ColumnData>
-        <ColumnData  className={classes.sectionStyle} columnTitle="RATINGS" fields={ratingFields} 
+        <ColumnData  className={classes.sectionStyle} columnTitle="RATINGS" 
+          fields={ratingFields} 
           data={schoolData.fields} 
           columnType="rating">
         </ColumnData>
@@ -50,7 +52,7 @@ export default function SchoolViewRating(props){
           data={schoolData.fields} 
           columnType="clubs">
         </ColumnData>
-        {/* <Comments className={classes.sectionStyle} data={schoolData.comments}></Comments> */}
+        <Comments className={classes.sectionStyle} data={reportData.comments}></Comments>
       </Container>
       } 
       {schoolData ? "" : <h5>Loading...</h5>}

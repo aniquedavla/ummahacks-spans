@@ -25,7 +25,7 @@ export default function DynamicForm(props){
         // console.log("search-school data", watch("search-school"));
         formSubmitCallback(validatedData);
     }
-    const validateDependentFields = (dependentFields, data) =>{
+    const validateDependentFields = (dependentFields, data) => {
         let validData = data;
         //if no value in parent, set children's data to null
         if(dependentFields.length >= 1){

@@ -48,6 +48,7 @@ const formFields = [
             fieldID: "hasWuduArea",
         },
     },
+    //halal food
     {
         label: "Has on-campus halal food options?",
         id: "hasOnCampusHalalFood", 
@@ -60,6 +61,29 @@ const formFields = [
         showWhenValueInField: {
             fieldID: "hasOnCampusHalalFood",
         },
+    },
+    //hate crimes
+    {
+        label: "Have you or someone you know encountered hate crimes?",
+        id: "hateCrimes",
+        type: "select",
+        menus: [
+            {
+                label: "never",
+                value: "never"
+            },
+            {
+                label: "a few times",
+                value: "few"
+            },
+            {
+                label: "many times",
+                value: "many"
+            }
+        ],
+
+        
+        
     },
 ];
 
