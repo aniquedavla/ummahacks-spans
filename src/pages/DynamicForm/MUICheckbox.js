@@ -10,7 +10,7 @@ const styles = makeStyles((theme)=>({
     }
 }))
 
-export default function MUICheckbox({label, id, required, register, setValue}){
+export default function MUICheckbox({label, id, dependentFieldId, required, register, setValue}){
     const [checkedState, setCheckedState] = useState(false);
     const classes = styles();
 

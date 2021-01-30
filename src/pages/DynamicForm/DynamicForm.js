@@ -13,9 +13,31 @@ export default function DynamicForm(props){
     let {spacing = 2, gridDirection = "row", submitGridWidth={submitXs: 12, submitMd: 12}} = formSettings;
     let getFields = [];
     let {submitMd, submitXs} = submitGridWidth;
-    const formSubmit = (data) => {  
-        console.log("search-school data", watch("search-school"));
-        formSubmitCallback(data);
+    
+    let dependentFields  = fields.filter((field)=>{
+        return field.showWhenValueInField != null;
+    });
+
+    console.log("Dependent Fields", dependentFields);
+
+    const formSubmit = (data) => {
+        let validatedData = validateDependentFields(dependentFields, data);
+        // console.log("search-school data", watch("search-school"));
+        formSubmitCallback(validatedData);
+    }
+    const validateDependentFields = (dependentFields, data) =>{
+        let validData = data;
+        //if no value in parent, set children's data to null
+        if(dependentFields.length >= 1){
+            dependentFields.map((field)=>{
+                let valueInParent = validData[field.showWhenValueInField.fieldID];
+                let childId  = field.id;
+                if(!valueInParent){
+                    validData[childId] = null;
+                }
+            })
+        }   
+        return validData;
     }
     return(
         <>  

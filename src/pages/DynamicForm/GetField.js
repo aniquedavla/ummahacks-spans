@@ -14,7 +14,7 @@ export default function getField(field, options, register, watch, formState, set
         case "text" : 
             return (<DynamicTextField {...field} register={register} setValue={setValue} isDirty={isDirty} variant={variant} styleClasses={styleClasses}></DynamicTextField>);
         case "rating": 
-            return(<HoverRating {...field} register={register} setValue={setValue}></HoverRating>)
+            return(<HoverRating {...field} register={register} setValue={setValue} watch={watch}></HoverRating>)
         case "checkbox":
             return(<MUICheckbox {...field} register={register} setValue={setValue}></MUICheckbox>);
         default: return (<></>)

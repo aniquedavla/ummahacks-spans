@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
+import { useWatch } from 'react-hook-form';
 
 const labels = {
   1: 'Horrible',
@@ -18,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function HoverRating({id, required, register, setValue}) {
+export default function HoverRating({id, required, register, setValue, showWhenValueInField, watch}) {
   const [value, setValueState] = React.useState(0);
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
@@ -35,12 +36,13 @@ export default function HoverRating({id, required, register, setValue}) {
         name={id}
         value={value}
         onChange={(event, newValue) => {
+          // console.log("show field", watch(showWhenValueInField.field));
+          //console.log("rating ", id , newValue)
           setValueState(newValue);
-          console.log("rating ", id , newValue)
           setValue(id, newValue);
         }}
         onChangeActive={(event, newHover) => {
-          setHover(newHover);
+              setHover(newHover);
         }}
         size="large"
       />

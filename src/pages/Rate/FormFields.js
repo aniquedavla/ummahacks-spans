@@ -23,6 +23,7 @@ const formFields = [
         label: "Has prayer space/meditation room?",
         id: "hasPrayerSpace", 
         type: "checkbox",
+        dependentFieldId: "prayerSpaceRating"
     },
     {
         label: "Rate prayer space",
@@ -31,7 +32,6 @@ const formFields = [
         type: "rating",
         showWhenValueInField: {
             fieldID: "hasPrayerSpace",
-            value: true
         },
     },
     //Wudu Area
