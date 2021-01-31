@@ -1,12 +1,10 @@
 import React from 'react';
 import {TextField, makeStyles} from "@material-ui/core";
-export default function DynamicTextField({label, id, required, rows, register, setValue, isDirty, variant, styleClasses}){
+export default function CommentField({label, id, required, register, setValue, isDirty, variant, styleClasses}){
     return (
         <TextField 
         //label={label}
         //helperText={this.props.formErrors.titleErrorMessage}
-        multiline={rows !=null ? true : false}
-        rows={rows !=null ?  rows : ""}
         classes={{root: styleClasses ? styleClasses.input : ""}}
         fullWidth
         error={isDirty}
@@ -19,13 +17,7 @@ export default function DynamicTextField({label, id, required, rows, register, s
         variant={variant}
         inputRef={
             register && register(
-                {name: id}, 
-                {
-                    required: {
-                        value: required,
-                        message: label + "is required"
-                    }
-                }
+                {name: id},
             )
         }
       />

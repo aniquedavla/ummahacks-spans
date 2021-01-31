@@ -85,6 +85,27 @@ const formFields = [
         
         
     },
+    //clubs and orgs
+    {
+        label: "Select all Muslim/cultural student organizations present on this campus",
+        id: "relevantStudentOrgs",
+        type: "multi-select",
+        menus: [
+            "Muslim Student Association(MSA)", 
+            "Students for Justice in Palestine(SJP)",
+            "Pakistani Student Association(PSA)", 
+            "Afghan Student Association", 
+            "Arab Student Association",
+            "Persian Student Association",
+            "Somalian Student Association"
+        ]  
+    },
+    {
+        label: "Comments",
+        id: "comment",
+        type: "text",
+        rows: 4,
+    },
 ];
 
 export {
