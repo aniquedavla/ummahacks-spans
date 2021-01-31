@@ -62,7 +62,7 @@ export default function DynamicMultiSelect({id,menus, register, setValue, styleC
                 setSelectedVal(selectedValues);
                 setValue(id, selectedValues)
             }}
-            input={<Input id="select-multiple-chip" variant="outlined"/>}
+            input={<Input id="select-multiple-chip"/>}
             classes={{root: styleClasses ? styleClasses.input : ""}}
             renderValue={(selected) => (
                 <div className={classes.chips}>

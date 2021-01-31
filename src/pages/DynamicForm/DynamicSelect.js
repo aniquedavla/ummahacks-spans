@@ -15,7 +15,7 @@ export default function DynamicSelect({id, menus, register, setValue, styleClass
                     setStateValue(selectedValue);
                     setValue(id, selectedValue);
                 }}
-                classes={{root: styleClasses ? styleClasses.input : ""}}
+                classes={{root: styleClasses != null ? styleClasses.input : ""}}
                 ref={register({name: id})}
                 variant="outlined"
             >
@@ -23,7 +23,7 @@ export default function DynamicSelect({id, menus, register, setValue, styleClass
                 </MenuItem>
                 {menus.map((menu)=>{
                     return(
-                        <MenuItem value={menu.value}>
+                        <MenuItem value={menu.value} >
                             {menu.label}
                         </MenuItem>
                     )

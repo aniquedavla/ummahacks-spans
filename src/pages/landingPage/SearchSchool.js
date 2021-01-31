@@ -7,7 +7,15 @@ import {schools} from "../ViewRating/reportData";
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import { useHistory  } from "react-router-dom";
-const styles = makeStyles({
+const styles = makeStyles((theme)=> ({
+    input: {
+        [theme.breakpoints.down('sm')]: {
+            width: 250
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 350
+        },
+    },
     formRoot: {
         background: "#fff",
         border: "2px solid #fff",
@@ -19,7 +27,7 @@ const styles = makeStyles({
         border: "2px solid #4472ca",
         borderRadius: ".5em"
     },
-});
+}));
 
 export default function SearchSchool(){
     let history = useHistory();

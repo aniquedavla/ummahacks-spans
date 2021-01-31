@@ -6,7 +6,10 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const styles = makeStyles((theme)=>({
     root: {
-        [theme.breakpoints.up("md")]: {width: 450,},
+        // background: "#FFF1B0"
+    },
+    container: {
+        [theme.breakpoints.up("md")]: {width: 500,},
         [theme.breakpoints.down("xs")]: {width: 350,},
         padding: ".5rem 2rem"
     },
@@ -18,7 +21,7 @@ const styles = makeStyles((theme)=>({
             width: 250
         },
         [theme.breakpoints.up('md')]: {
-            width: 350
+            width: 400
         },
     },
     submitButton: {
@@ -27,6 +30,7 @@ const styles = makeStyles((theme)=>({
         alignItems: "center"
     }
 }));
+
 export default function RateForm2(){
     let classes = styles(); 
     let formLabel = "Rate a school";
@@ -39,12 +43,14 @@ export default function RateForm2(){
         console.log("Rate form data:", data)
     }
     return(
-        <Container className={classes.root}>
-            <Box>
-                <Typography variant="h4" align="left">{formLabel}</Typography>
-                <Typography variant="subtitle1" align="left">{formDescription}</Typography>
-            </Box>
-            <DynamicForm fields={formFields} formSubmitCallback={submitForm} formSettings={formSettings} styleClasses={classes}></DynamicForm>
-        </Container>
+        <Box className={classes.root}>
+            <Container className={classes.container}>
+                <Box>
+                    <Typography variant="h4" align="left">{formLabel}</Typography>
+                    <Typography variant="subtitle1" align="left">{formDescription}</Typography>
+                </Box>
+                <DynamicForm fields={formFields} formSubmitCallback={submitForm} formSettings={formSettings} styleClasses={classes}></DynamicForm>
+            </Container>
+        </Box>
     );
 }

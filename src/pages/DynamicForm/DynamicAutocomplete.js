@@ -6,15 +6,15 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme)=> ({
-    root: {
-      [theme.breakpoints.down('sm')]:
-        {
-          width: 250
-        },
-      [theme.breakpoints.up('md')]: {
-        width: 350
-      },
-    },
+    // root: {
+    //   [theme.breakpoints.down('sm')]:
+    //     {
+    //       width: 250
+    //     },
+    //   [theme.breakpoints.up('md')]: {
+    //     width: 350
+    //   },
+    // },
     option: {
       fontSize: "1rem",
       '& > span': {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme)=> ({
   }));
 
 export default function DynamicAutocomplete(props){
-  let {field, setValue, register, styles} = props;
+  let {field, setValue, register, styleClasses} = props;
   let {label, id, placeholder = false, dataURL} = field;
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
@@ -92,7 +92,7 @@ React.useEffect(() => {
           setOpen(false);
         }}
         classes={{
-          root: classes.root,
+          root: styleClasses != null ? styleClasses.input : "",
           option: classes.option,
         }}
         autoHighlight
@@ -108,7 +108,7 @@ React.useEffect(() => {
             {...params}
             //label={!placeholder ? label : ""}
             classes={{
-              root: styles ? styles.searchAutoComplete : "",
+              root: styleClasses != null ? styleClasses.searchAutoComplete : "",
             }}
             placeholder={placeholder ? placeholder : ""}
             variant="outlined"

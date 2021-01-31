@@ -5,7 +5,8 @@ export default function CommentField({label, id, required, register, setValue, i
         <TextField 
         //label={label}
         //helperText={this.props.formErrors.titleErrorMessage}
-        classes={{root: styleClasses ? styleClasses.input : ""}}
+        rows={rows !=null ?  4 : ""}
+        classes={{root: styleClasses != null ? styleClasses.input : ""}}
         fullWidth
         error={isDirty}
         name={label}

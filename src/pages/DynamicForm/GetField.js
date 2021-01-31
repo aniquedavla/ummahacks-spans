@@ -12,7 +12,7 @@ export default function getField(field, options, register, watch, formState, set
     let {isDirty} = formState; 
     switch(type){
         case "autocomplete":
-            return (<DynamicAutcomplete options={options} field={field} setValue={setValue} register={register} styles={styleClasses}></DynamicAutcomplete>);           
+            return (<DynamicAutcomplete options={options} field={field} setValue={setValue} register={register} styleClasses={styleClasses}></DynamicAutcomplete>);           
         case "text" : 
             return (<DynamicTextField {...field} register={register} setValue={setValue} isDirty={isDirty} variant={variant} styleClasses={styleClasses}></DynamicTextField>);
         // case "paragraph" : 
