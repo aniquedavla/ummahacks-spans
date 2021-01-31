@@ -62,6 +62,56 @@ const formFields = [
             fieldID: "hasOnCampusHalalFood",
         },
     },
+    //clubs and orgs
+    {
+        label: "Select all Muslim/cultural student organizations present on this campus",
+        id: "relevantStudentOrgs",
+        type: "multi-select",
+        menus: [
+            "Muslim Student Association(MSA)", 
+            "Students for Justice in Palestine(SJP)",
+            "Pakistani Student Association(PSA)", 
+            "Afghan Student Association", 
+            "Arab Student Association",
+            "Persian Student Association",
+            "Somalian Student Association"
+        ]  
+    },
+    {
+        label: "Add a student organization that we missed",
+        id: "missedStudentOrg",
+        type: "text"
+
+    },
+    //traditional clothing
+    {
+        label: "How comfortable are students wearing traditional/cultural/Islamic clothing?",
+        id: "traditionalClothingComfortRating",
+        type: "rating"
+    },
+    {
+        label: "Rate Muslim presence on this campus",
+        id: "muslimPresenceRating",
+        type: "rating"
+
+    },
+    {
+        label: "Rate Muslim student leadership on campus",
+        id: "muslimLeadershipRating",
+        type: "rating"
+
+    },
+    {
+        label: "Rate Muslim staff presence on campus",
+        id: "muslimStaffPresenceRating",
+        type: "rating"
+
+    },
+    {
+        label: "Rate the student dorms for Muslim friendliness",
+        id: "dormsFriendlinessRating",
+        type: "rating"
+    },
     //hate crimes
     {
         label: "Have you or someone you know encountered hate crimes?",
@@ -81,24 +131,6 @@ const formFields = [
                 value: "many"
             }
         ],
-
-        
-        
-    },
-    //clubs and orgs
-    {
-        label: "Select all Muslim/cultural student organizations present on this campus",
-        id: "relevantStudentOrgs",
-        type: "multi-select",
-        menus: [
-            "Muslim Student Association(MSA)", 
-            "Students for Justice in Palestine(SJP)",
-            "Pakistani Student Association(PSA)", 
-            "Afghan Student Association", 
-            "Arab Student Association",
-            "Persian Student Association",
-            "Somalian Student Association"
-        ]  
     },
     {
         label: "Comments",

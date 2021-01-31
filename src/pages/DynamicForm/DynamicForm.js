@@ -18,7 +18,7 @@ export default function DynamicForm(props){
         return field.showWhenValueInField != null;
     });
 
-    console.log("Dependent Fields", dependentFields);
+    // console.log("Dependent Fields", dependentFields);
 
     const formSubmit = (data) => {
         let validatedData = validateDependentFields(dependentFields, data);

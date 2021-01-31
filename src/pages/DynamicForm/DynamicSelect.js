@@ -7,7 +7,6 @@ export default function DynamicSelect({id, menus, register, setValue, styleClass
     return(
         <>
             <Select
-                name={id}
                 id={id}
                 value={value}
                 onChange={(event)=>{
@@ -23,7 +22,7 @@ export default function DynamicSelect({id, menus, register, setValue, styleClass
                 </MenuItem>
                 {menus.map((menu)=>{
                     return(
-                        <MenuItem value={menu.value} >
+                        <MenuItem value={menu.value}>
                             {menu.label}
                         </MenuItem>
                     )
