@@ -675,8 +675,10 @@ const removeDuplicates = (notUniqueSchools) => {
     })
     return nonDuplSchools;
 }
-let notUniqueSchools = uniqueSchools(airtableSchools);
-let nonDupSchool = removeDuplicates(notUniqueSchools);
-console.log(nonDupSchool);
+// let notUniqueSchools = uniqueSchools(airtableSchools);
+// let nonDupSchool = removeDuplicates(notUniqueSchools);
+// console.log(nonDupSchool);
 
 
+
+module.exports = tureUniqueSchools;
